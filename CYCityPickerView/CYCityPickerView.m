@@ -8,13 +8,16 @@
 
 #import "CYCityPickerView.h"
 
+/** 列数 */
 #define CY_CITY_PICKER_COMPONENTS    3
+
 #define CY_PROVINCE_COMPONENT        0
 #define CY_CITY_COMPONENT            1
 #define CY_DISCTRCT_COMPONENT        2
+
 #define CY_FIRST_INDEX               0
 
-#define CY_COMPONENT_WIDTH   100 //每一列的宽度
+#define CY_COMPONENT_WIDTH   100 // 每一列的宽度
 
 @interface CYCityPickerView () <UIPickerViewDelegate, UIPickerViewDataSource>
 
@@ -69,7 +72,7 @@
 }
 
 
-// 选择指定列、指定列表项时激发该方法
+// 选择指定列、指定列表项时调用该方法
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == CY_PROVINCE_COMPONENT) {
         NSDictionary *provinceDic = [self provinceDicAtIndex:row];
