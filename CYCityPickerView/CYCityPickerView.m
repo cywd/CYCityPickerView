@@ -215,7 +215,6 @@
 }
 
 #pragma mark - Getter and Setter
-
 - (NSDictionary *)allCityInfo {
     if (!_allCityInfo) {
         Class selfClass = [self class];
